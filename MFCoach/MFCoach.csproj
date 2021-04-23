@@ -52,7 +52,9 @@
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <HintPath>..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.ComponentModel.DataAnnotations.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -85,6 +87,12 @@
     <Compile Include="frmCompany.Designer.cs">
       <DependentUpon>frmCompany.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmCoordinator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCoordinator.Designer.cs">
+      <DependentUpon>FrmCoordinator.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\202104201749170_initial.cs" />
     <Compile Include="Migrations\202104201749170_initial.designer.cs">
       <DependentUpon>202104201749170_initial.cs</DependentUpon>
@@ -93,17 +101,27 @@
     <Compile Include="Migrations\202104220047248_Verde.designer.cs">
       <DependentUpon>202104220047248_Verde.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104231747168_Amarillo.cs" />
+    <Compile Include="Migrations\202104231747168_Amarillo.designer.cs">
+      <DependentUpon>202104231747168_Amarillo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmCompany.resx">
       <DependentUpon>frmCompany.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmCoordinator.resx">
+      <DependentUpon>FrmCoordinator.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104201749170_initial.resx">
       <DependentUpon>202104201749170_initial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104220047248_Verde.resx">
       <DependentUpon>202104220047248_Verde.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104231747168_Amarillo.resx">
+      <DependentUpon>202104231747168_Amarillo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -116,6 +134,7 @@
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\MFCoach.Entities.Company.datasource" />
+    <None Include="Properties\DataSources\MFCoach.Entities.Coordinator.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
