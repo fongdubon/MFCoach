@@ -109,14 +109,6 @@
     <Compile Include="Migrations\202104201749170_initial.designer.cs">
       <DependentUpon>202104201749170_initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202104220047248_Verde.cs" />
-    <Compile Include="Migrations\202104220047248_Verde.designer.cs">
-      <DependentUpon>202104220047248_Verde.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202104231747168_Amarillo.cs" />
-    <Compile Include="Migrations\202104231747168_Amarillo.designer.cs">
-      <DependentUpon>202104231747168_Amarillo.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -134,12 +126,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104201749170_initial.resx">
       <DependentUpon>202104201749170_initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104220047248_Verde.resx">
-      <DependentUpon>202104220047248_Verde.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104231747168_Amarillo.resx">
-      <DependentUpon>202104231747168_Amarillo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
