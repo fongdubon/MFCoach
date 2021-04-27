@@ -81,11 +81,23 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmCoach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCoach.Designer.cs">
+      <DependentUpon>FrmCoach.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCompany.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmCompany.Designer.cs">
       <DependentUpon>frmCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmContacts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmContacts.Designer.cs">
+      <DependentUpon>FrmContacts.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmCoordinator.cs">
       <SubType>Form</SubType>
@@ -100,8 +112,14 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmCoach.resx">
+      <DependentUpon>FrmCoach.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCompany.resx">
       <DependentUpon>frmCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmContacts.resx">
+      <DependentUpon>FrmContacts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCoordinator.resx">
       <DependentUpon>FrmCoordinator.cs</DependentUpon>
