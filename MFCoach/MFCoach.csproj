@@ -99,6 +99,12 @@
     <Compile Include="FrmCoordinator.Designer.cs">
       <DependentUpon>FrmCoordinator.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStudent.Designer.cs">
+      <DependentUpon>FrmStudent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\202104201749170_initial.cs" />
     <Compile Include="Migrations\202104201749170_initial.designer.cs">
       <DependentUpon>202104201749170_initial.cs</DependentUpon>
@@ -123,6 +129,9 @@
     <EmbeddedResource Include="FrmCoordinator.resx">
       <DependentUpon>FrmCoordinator.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmStudent.resx">
+      <DependentUpon>FrmStudent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104201749170_initial.resx">
       <DependentUpon>202104201749170_initial.cs</DependentUpon>
     </EmbeddedResource>
@@ -144,6 +153,7 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\MFCoach.Entities.Company.datasource" />
     <None Include="Properties\DataSources\MFCoach.Entities.Coordinator.datasource" />
+    <None Include="Properties\DataSources\MFCoach.Entities.Student.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
