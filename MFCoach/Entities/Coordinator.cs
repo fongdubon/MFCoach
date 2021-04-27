@@ -5,7 +5,7 @@ namespace MFCoach.Entities
     public class Coordinator
     {
         
-        #region 
+        #region Propiedades
         [Key]
         public int Id { get; set; }
         [Required]
@@ -22,7 +22,7 @@ namespace MFCoach.Entities
 
         public string Email { get; set; }
 
-        public string FullName { get; }
+        public string FullName { get { return $"{FirstName} {LastName}"; } }
         #endregion 
     }
 }
