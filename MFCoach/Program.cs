@@ -16,7 +16,7 @@ namespace MFCoach
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmCompany());
+            Application.Run(new FrmCoordinator());
         }
     }
 }
