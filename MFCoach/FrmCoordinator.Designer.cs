@@ -41,6 +41,7 @@ namespace MFCoach
             this.pnlDatos = new MetroFramework.Controls.MetroPanel();
             this.btnSearch = new MetroFramework.Controls.MetroButton();
             this.txtEmail = new MetroFramework.Controls.MetroTextBox();
+            this.coordinatorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblEmail = new MetroFramework.Controls.MetroLabel();
             this.txtCellPhoneNumber = new MetroFramework.Controls.MetroTextBox();
             this.lblCellPhoneNumber = new MetroFramework.Controls.MetroLabel();
@@ -53,17 +54,16 @@ namespace MFCoach
             this.pctPhoto = new System.Windows.Forms.PictureBox();
             this.grdDatos = new MetroFramework.Controls.MetroGrid();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fullNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cellPhoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.photoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fullNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coordinatorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlDatos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.coordinatorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctPhoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdDatos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.coordinatorBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSave
@@ -165,6 +165,7 @@ namespace MFCoach
             this.txtEmail.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtEmail.CustomButton.UseSelectable = true;
             this.txtEmail.CustomButton.Visible = false;
+            this.txtEmail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.coordinatorBindingSource, "Email", true));
             this.txtEmail.Lines = new string[0];
             this.txtEmail.Location = new System.Drawing.Point(243, 130);
             this.txtEmail.MaxLength = 32767;
@@ -180,6 +181,10 @@ namespace MFCoach
             this.txtEmail.UseSelectable = true;
             this.txtEmail.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtEmail.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // coordinatorBindingSource
+            // 
+            this.coordinatorBindingSource.DataSource = typeof(MFCoach.Entities.Coordinator);
             // 
             // lblEmail
             // 
@@ -204,6 +209,7 @@ namespace MFCoach
             this.txtCellPhoneNumber.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtCellPhoneNumber.CustomButton.UseSelectable = true;
             this.txtCellPhoneNumber.CustomButton.Visible = false;
+            this.txtCellPhoneNumber.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.coordinatorBindingSource, "CellPhoneNumber", true));
             this.txtCellPhoneNumber.Lines = new string[0];
             this.txtCellPhoneNumber.Location = new System.Drawing.Point(243, 101);
             this.txtCellPhoneNumber.MaxLength = 32767;
@@ -243,6 +249,7 @@ namespace MFCoach
             this.txtLastName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtLastName.CustomButton.UseSelectable = true;
             this.txtLastName.CustomButton.Visible = false;
+            this.txtLastName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.coordinatorBindingSource, "LastName", true));
             this.txtLastName.Lines = new string[0];
             this.txtLastName.Location = new System.Drawing.Point(243, 72);
             this.txtLastName.MaxLength = 32767;
@@ -282,6 +289,7 @@ namespace MFCoach
             this.txtFirstName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtFirstName.CustomButton.UseSelectable = true;
             this.txtFirstName.CustomButton.Visible = false;
+            this.txtFirstName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.coordinatorBindingSource, "FirstName", true));
             this.txtFirstName.Lines = new string[0];
             this.txtFirstName.Location = new System.Drawing.Point(243, 43);
             this.txtFirstName.MaxLength = 32767;
@@ -321,6 +329,7 @@ namespace MFCoach
             this.txtId.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtId.CustomButton.UseSelectable = true;
             this.txtId.CustomButton.Visible = false;
+            this.txtId.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.coordinatorBindingSource, "Id", true));
             this.txtId.Enabled = false;
             this.txtId.Lines = new string[0];
             this.txtId.Location = new System.Drawing.Point(243, 14);
@@ -352,6 +361,7 @@ namespace MFCoach
             this.pctPhoto.Location = new System.Drawing.Point(18, 18);
             this.pctPhoto.Name = "pctPhoto";
             this.pctPhoto.Size = new System.Drawing.Size(76, 96);
+            this.pctPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctPhoto.TabIndex = 2;
             this.pctPhoto.TabStop = false;
             // 
@@ -374,12 +384,12 @@ namespace MFCoach
             this.grdDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
+            this.fullNameDataGridViewTextBoxColumn,
             this.firstNameDataGridViewTextBoxColumn,
             this.lastNameDataGridViewTextBoxColumn,
             this.cellPhoneNumberDataGridViewTextBoxColumn,
             this.photoDataGridViewTextBoxColumn,
-            this.emailDataGridViewTextBoxColumn,
-            this.fullNameDataGridViewTextBoxColumn});
+            this.emailDataGridViewTextBoxColumn});
             this.grdDatos.DataSource = this.coordinatorBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -415,17 +425,26 @@ namespace MFCoach
             this.idDataGridViewTextBoxColumn.HeaderText = "Id";
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             // 
+            // fullNameDataGridViewTextBoxColumn
+            // 
+            this.fullNameDataGridViewTextBoxColumn.DataPropertyName = "FullName";
+            this.fullNameDataGridViewTextBoxColumn.HeaderText = "FullName";
+            this.fullNameDataGridViewTextBoxColumn.Name = "fullNameDataGridViewTextBoxColumn";
+            this.fullNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // firstNameDataGridViewTextBoxColumn
             // 
             this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
             this.firstNameDataGridViewTextBoxColumn.HeaderText = "FirstName";
             this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
+            this.firstNameDataGridViewTextBoxColumn.Visible = false;
             // 
             // lastNameDataGridViewTextBoxColumn
             // 
             this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
             this.lastNameDataGridViewTextBoxColumn.HeaderText = "LastName";
             this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            this.lastNameDataGridViewTextBoxColumn.Visible = false;
             // 
             // cellPhoneNumberDataGridViewTextBoxColumn
             // 
@@ -445,17 +464,6 @@ namespace MFCoach
             this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
             this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
             // 
-            // fullNameDataGridViewTextBoxColumn
-            // 
-            this.fullNameDataGridViewTextBoxColumn.DataPropertyName = "FullName";
-            this.fullNameDataGridViewTextBoxColumn.HeaderText = "FullName";
-            this.fullNameDataGridViewTextBoxColumn.Name = "fullNameDataGridViewTextBoxColumn";
-            this.fullNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // coordinatorBindingSource
-            // 
-            this.coordinatorBindingSource.DataSource = typeof(MFCoach.Entities.Coordinator);
-            // 
             // FrmCoordinator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -469,12 +477,12 @@ namespace MFCoach
             this.Controls.Add(this.pnlDatos);
             this.Controls.Add(this.grdDatos);
             this.Name = "FrmCoordinator";
-            this.Text = "FrmCoordinator";
+            this.Text = "Coordinator";
             this.pnlDatos.ResumeLayout(false);
             this.pnlDatos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.coordinatorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctPhoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdDatos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.coordinatorBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -500,13 +508,13 @@ namespace MFCoach
         private MetroFramework.Controls.MetroLabel lblId;
         private System.Windows.Forms.PictureBox pctPhoto;
         private MetroFramework.Controls.MetroGrid grdDatos;
+        private System.Windows.Forms.BindingSource coordinatorBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fullNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cellPhoneNumberDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn photoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fullNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource coordinatorBindingSource;
     }
 }
