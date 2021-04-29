@@ -12,7 +12,14 @@
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                    })
+                        FirstName = c.String(),
+                        LastName = c.String(),
+                        PhoneNumber = c.String(),
+                        CellPhoneNumber = c.String(),
+                        Photo = c.String(),
+                        Email = c.String(),
+                        department = c.String(),
+                })
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
